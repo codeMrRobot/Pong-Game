@@ -28,6 +28,7 @@ export default class Game {
 			this.height,
     );
 
+    this.radius = 12;
     this.ball2 = new Ball(
 			this.radius,
 			this.width,
