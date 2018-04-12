@@ -27,6 +27,12 @@ export default class Game {
 			this.width,
 			this.height,
     );
+
+    this.ball2 = new Ball(
+			this.radius,
+			this.width,
+      this.height,
+    );
     
     this.score1 = new Score(200, 35, 25);
     this.score2 = new Score(300, 35, 25);
@@ -52,9 +58,20 @@ export default class Game {
     this.paddle1.render(svg);
     this.paddle2.render(svg);
     this.ball.render(svg, this.paddle1, this.paddle2);
+    this.ball2.render(svg, this.paddle1, this.paddle2);
     this.score1.render(svg, this.paddle1.score);
 		this.score2.render(svg, this.paddle2.score);
     
   }
 
 }
+
+let audio;
+document.addEventListener('keydown', event => {
+	switch (event.key) {
+		case 'm':
+			audio = new Audio('public/sounds/yodeling.mp3');
+			break;
+	}
+	audio.play();
+});
