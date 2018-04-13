@@ -29,8 +29,8 @@ export default class Paddle {
 
   biggerSize(){
     if (this.height === 56){
-      this.height = 123;
-      this.speed = 5;
+      this.height = 112;
+      this.speed = 4;
       this.width = 10;
     }
       else{
@@ -39,7 +39,6 @@ export default class Paddle {
         this.width = 8;
       }
 
-    
   }
 
   up(){

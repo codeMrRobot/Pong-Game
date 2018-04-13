@@ -50,8 +50,8 @@ export default class Game {
       this.height,
     );
     
-    this.score1 = new Score(200, 25, 20);
-    this.score2 = new Score(300, 25, 20);
+    this.score1 = new Score(200, 25, 25);
+    this.score2 = new Score(300, 25, 25);
     
     document.addEventListener('keydown', event => {
 			if (event.key === KEYS.spaceBar) {
