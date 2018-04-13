@@ -10,6 +10,7 @@ export default class Game {
     this.element = element;
     this.width = width;
     this.height = height;
+    this.pause = false;
 
     this.gameElement = document.getElementById(this.element);
     this.board = new Board(this.width, this.height);
@@ -28,15 +29,29 @@ export default class Game {
 			this.height,
     );
 
-    this.radius = 12;
+    this.radius = 10;
     this.ball2 = new Ball(
 			this.radius,
 			this.width,
       this.height,
     );
+
+    this.radius = 12;
+    this.ball3 = new Ball(
+			this.radius,
+			this.width,
+      this.height,
+    );
+
+    this.radius = 14;
+    this.ball4 = new Ball(
+			this.radius,
+			this.width,
+      this.height,
+    );
     
-    this.score1 = new Score(200, 35, 25);
-    this.score2 = new Score(300, 35, 25);
+    this.score1 = new Score(100, 25, 15);
+    this.score2 = new Score(200, 25, 15);
     
     document.addEventListener('keydown', event => {
 			if (event.key === KEYS.spaceBar) {
@@ -48,6 +63,9 @@ export default class Game {
 
   render() {
     
+    if(this.pause){
+      return;
+    }
     this.gameElement.innerHTML = '';
     let svg = document.createElementNS(SVG_NS, 'svg');
     svg.setAttributeNS(null, 'width', this.width);
@@ -60,6 +78,8 @@ export default class Game {
     this.paddle2.render(svg);
     this.ball.render(svg, this.paddle1, this.paddle2);
     this.ball2.render(svg, this.paddle1, this.paddle2);
+    this.ball3.render(svg, this.paddle1, this.paddle2);
+    this.ball4.render(svg, this.paddle1, this.paddle2);
     this.score1.render(svg, this.paddle1.score);
 		this.score2.render(svg, this.paddle2.score);
     
