@@ -29,29 +29,29 @@ export default class Game {
 			this.height,
     );
 
-    this.radius = 10;
+    this.radius = 6;
     this.ball2 = new Ball(
 			this.radius,
 			this.width,
       this.height,
     );
 
-    this.radius = 12;
+    this.radius = 11;
     this.ball3 = new Ball(
 			this.radius,
 			this.width,
       this.height,
     );
 
-    this.radius = 14;
+    this.radius = 4;
     this.ball4 = new Ball(
 			this.radius,
 			this.width,
       this.height,
     );
     
-    this.score1 = new Score(100, 25, 15);
-    this.score2 = new Score(200, 25, 15);
+    this.score1 = new Score(200, 25, 20);
+    this.score2 = new Score(300, 25, 20);
     
     document.addEventListener('keydown', event => {
 			if (event.key === KEYS.spaceBar) {

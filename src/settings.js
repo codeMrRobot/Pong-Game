@@ -7,6 +7,7 @@ export const KEYS = {
   p2down: 'ArrowDown',
   spaceBar: ' ',
   m: 'm',
+  g: 'g',
   
 }
 

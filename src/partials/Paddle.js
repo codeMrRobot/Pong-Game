@@ -1,4 +1,4 @@
-import { SVG_NS } from '../settings.js';
+import { SVG_NS, KEYS } from '../settings.js';
 
 export default class Paddle {
   constructor(boardHeight, width, height, x, y, up, down) {
@@ -19,9 +19,27 @@ export default class Paddle {
         case down:
           this.down();        
           break;
+          case KEYS.g:
+          this.biggerSize();
+          break;
       }
     });
    
+  }
+
+  biggerSize(){
+    if (this.height === 56){
+      this.height = 123;
+      this.speed = 5;
+      this.width = 10;
+    }
+      else{
+        this.height = 56;
+        this.speed = 10;
+        this.width = 8;
+      }
+
+    
   }
 
   up(){
