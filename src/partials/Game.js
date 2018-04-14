@@ -86,8 +86,8 @@ export default class Game {
     this.score2.render(svg, this.paddle2.score);
     
     
-    const paddle1Msg = 'Player 1 Wins!';
-    const paddle2Msg = 'Player 2 Wins!';
+    const paddle1Msg = 'Player 1 Wins! :)';
+    const paddle2Msg = 'Player 2 Wins! :)';
     if (this.paddle1.score === 10) {
       this.winner.render(svg, paddle1Msg);
       this.pause = !this.pause;

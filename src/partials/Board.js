@@ -22,9 +22,9 @@ export default class Board {
     line.setAttributeNS(null, 'y1', 0);
     line.setAttributeNS(null, 'x2', this.width / 2);
     line.setAttributeNS(null, 'y1', this.height);
-    line.setAttributeNS(null, 'stroke', 'white');
+    line.setAttributeNS(null, 'stroke', 'red');
     line.setAttributeNS(null, 'stroke-dasharray', '20,20');
-    line.setAttributeNS(null, 'stroke-width', '5');
+    line.setAttributeNS(null, 'stroke-width', '3');
     svg.appendChild(line);
   }
 
