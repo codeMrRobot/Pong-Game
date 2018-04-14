@@ -8,6 +8,7 @@ export const KEYS = {
   spaceBar: ' ',
   m: 'm',
   g: 'g',
+  s: 's',
   
 }
 

@@ -11,7 +11,7 @@ export default class Message {
     let winner = document.createElementNS(SVG_NS, 'text');
     winner.setAttributeNS(null, 'x', this.x);
     winner.setAttributeNS(null, 'y', this.y);
-    winner.setAttributeNS(null, 'fill', 'black');
+    winner.setAttributeNS(null, 'fill', 'green');
     winner.setAttributeNS(null, 'font-size', this.size);
     winner.setAttributeNS(null, 'font-family', 'Silkscreen Web, monospace');
     winner.innerHTML = message;

@@ -19,12 +19,29 @@ export default class Paddle {
         case down:
           this.down();        
           break;
+          case KEYS.s:
+          this.smallerSize();
+          break;
           case KEYS.g:
           this.biggerSize();
           break;
       }
     });
    
+  }
+
+  smallerSize(){
+    if (this.height === 56){
+      this.height = 30;
+      this.speed = 45;
+      this.width = 5;
+    }
+      else{
+        this.height = 56;
+        this.speed = 10; 
+        this.width = 8;
+      }
+
   }
 
   biggerSize(){

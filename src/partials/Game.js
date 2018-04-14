@@ -52,8 +52,8 @@ export default class Game {
     );
     
     this.score1 = new Score(200, 25, 25);
-    this.score2 = new Score(300, 25, 25);
-    this.winner = new Message(80, 170, 40);
+    this.score2 = new Score(290, 25, 25);
+    this.winner = new Message(80, 130, 40);
     
     document.addEventListener('keydown', event => {
 			if (event.key === KEYS.spaceBar) {
@@ -90,8 +90,10 @@ export default class Game {
     const paddle2Msg = 'Player 2 Wins!';
     if (this.paddle1.score === 10) {
       this.winner.render(svg, paddle1Msg);
+      this.pause = !this.pause;
     } else if (this.paddle2.score === 10) {
       this.winner.render(svg, paddle2Msg);
+      this.pause = !this.pause;
     }
   }
 }
@@ -106,6 +108,7 @@ document.addEventListener('keydown', event => {
 	}
 	audio.play();
 });
+
 
 
   
