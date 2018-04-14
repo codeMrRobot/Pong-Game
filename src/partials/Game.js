@@ -37,9 +37,9 @@ export default class Game {
       this.height,
     );
 
-    this.radius = 11;
+    this.radius = 10;
     this.ball3 = new Ball(
-			this.radius,
+		this.radius,
 			this.width,
       this.height,
     );
@@ -88,10 +88,10 @@ export default class Game {
     
     const paddle1Msg = 'Player 1 Wins! :)';
     const paddle2Msg = 'Player 2 Wins! :)';
-    if (this.paddle1.score === 10) {
+    if (this.paddle1.score === 15) {
       this.winner.render(svg, paddle1Msg);
       this.pause = !this.pause;
-    } else if (this.paddle2.score === 10) {
+    } else if (this.paddle2.score === 15) {
       this.winner.render(svg, paddle2Msg);
       this.pause = !this.pause;
     }

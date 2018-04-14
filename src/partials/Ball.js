@@ -74,7 +74,7 @@ export default class Ball {
   goal(paddle) {
     paddle.score++;
     this.reset();
-    if (paddle.score === 10){
+    if (paddle.score === 15){
       this.vx = 0;
       this.vy = 0;
     }

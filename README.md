@@ -17,6 +17,10 @@ A basic pong game using SVGs.
 `> npm run build`
 
 ## Keys
+* s: shrink paddle
+* g: grow paddle
+* m: plays music
+* ' ': pause game
 
 **Player 1:**
 * a: up
@@ -25,4 +29,5 @@ A basic pong game using SVGs.
 **Player 2:**
 * ▲ : up
 * ▼: down
+
 # Pong-Game
