@@ -35,7 +35,7 @@ export default class Paddle {
     }
       else{
         this.height = 56;
-        this.speed = 10;
+        this.speed = 10; 
         this.width = 8;
       }
 

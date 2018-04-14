@@ -84,3 +84,11 @@ h1 {
   margin-bottom: 1rem; 
   text-align: center;
 }
+.game-wrapper{
+  position: relative;
+}
+.player-title-container{
+  display:flex;
+  justify-content: space-between;
+  padding-bottom:1rem;
+}

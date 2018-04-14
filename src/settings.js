@@ -11,7 +11,12 @@ export const KEYS = {
   
 }
 
-// export const PADDLEHEIGHT = 56;
-// export const PADDLEHWIDTH= 8;
-// export const BOARDGAP = 10;
-// export const PADDLESPEED = 10;
+
+
+// export const SETTINGS = {
+//   boardGap: 10, // distance away from the edge of the board
+//   speed: 10, // speed of paddle
+//   ballColor: '#fc8302',
+//   paddleColor: '#02d0f4',
+//   boardColor: '#353535',
+// };

@@ -3,6 +3,7 @@ import Board from './Board';
 import Paddle from './Paddle';
 import Ball from './Ball';
 import Score from './Score';
+import Message from './Message';
 
 export default class Game {
 
@@ -52,6 +53,7 @@ export default class Game {
     
     this.score1 = new Score(200, 25, 25);
     this.score2 = new Score(300, 25, 25);
+    this.winner = new Message(80, 170, 40);
     
     document.addEventListener('keydown', event => {
 			if (event.key === KEYS.spaceBar) {
@@ -81,12 +83,20 @@ export default class Game {
     this.ball3.render(svg, this.paddle1, this.paddle2);
     this.ball4.render(svg, this.paddle1, this.paddle2);
     this.score1.render(svg, this.paddle1.score);
-		this.score2.render(svg, this.paddle2.score);
+    this.score2.render(svg, this.paddle2.score);
     
+    
+    const paddle1Msg = 'Player 1 Wins!';
+    const paddle2Msg = 'Player 2 Wins!';
+    if (this.paddle1.score === 10) {
+      this.winner.render(svg, paddle1Msg);
+    } else if (this.paddle2.score === 10) {
+      this.winner.render(svg, paddle2Msg);
+    }
   }
-
 }
-
+    
+  
 let audio;
 document.addEventListener('keydown', event => {
 	switch (event.key) {
@@ -96,3 +106,7 @@ document.addEventListener('keydown', event => {
 	}
 	audio.play();
 });
+
+
+  
+
