@@ -5,6 +5,8 @@ export default class Message {
     this.x = x;
     this.y = y;
     this.size = size;
+    
+   
   }
 
   render(svg, message) {
