@@ -55,9 +55,12 @@ export default class Game {
     this.score2 = new Score(290, 25, 25);
     this.winner = new Message(80, 130, 40);
     
+   
     document.addEventListener('keydown', event => {
 			if (event.key === KEYS.spaceBar) {
-				this.pause = !this.pause;
+        this.pause = !this.pause;
+        
+        
       }
     });
  

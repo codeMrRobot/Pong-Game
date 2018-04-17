@@ -90,7 +90,7 @@ export default class Ball {
     ball.setAttributeNS(null, 'r', this.radius);
     ball.setAttributeNS(null, 'cx', this.x);
     ball.setAttributeNS(null, 'cy', this.y);
-    ball.setAttributeNS(null, 'fill', 'white');
+    ball.setAttributeNS(null, 'fill', 'green');
     svg.appendChild(ball);
   }
 }

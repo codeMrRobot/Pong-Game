@@ -1,5 +1,5 @@
 import { SVG_NS } from '../settings.js';
-
+ 
 export default class Board {
 
   constructor(width, height) {
@@ -30,3 +30,4 @@ export default class Board {
 
 
 }
+

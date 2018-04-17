@@ -20,7 +20,7 @@ A basic pong game using SVGs.
 * s: shrink paddle
 * g: grow paddle
 * m: plays music
-* ' ': pause game
+* 'spacebar': pauses game
 
 **Player 1:**
 * a: up

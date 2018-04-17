@@ -30,6 +30,7 @@ export default class Paddle {
    
   }
 
+
   smallerSize(){
     if (this.height === 56){
       this.height = 30;

@@ -11,13 +11,3 @@ export const KEYS = {
   s: 's',
   
 }
-
-
-
-// export const SETTINGS = {
-//   boardGap: 10, // distance away from the edge of the board
-//   speed: 10, // speed of paddle
-//   ballColor: '#fc8302',
-//   paddleColor: '#02d0f4',
-//   boardColor: '#353535',
-// };
