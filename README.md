@@ -33,4 +33,12 @@ A basic pong game using SVGs.
 * ▲ : up
 * ▼: down
 
+## tech used
+
+* JavaScript
+* Html 5
+* CSS
+* SCSS
+* Webpack
+
 
