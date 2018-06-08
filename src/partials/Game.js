@@ -93,10 +93,20 @@ export default class Game {
     const paddle2Msg = 'Player 2 Wins! :)';
     if (this.paddle1.score === 15) {
       this.winner.render(svg, paddle1Msg);
-      this.pause = !this.pause;
+      this.reset(this.paddle1);
+      this.reset(this.paddle2);
+      this.ball.reset();
+      this.ball2.reset();
+      this.ball3.reset();
+      this.ball4.reset();
     } else if (this.paddle2.score === 15) {
       this.winner.render(svg, paddle2Msg);
-      this.pause = !this.pause;
+      this.reset(this.paddle1);
+      this.reset(this.paddle2);
+      this.ball.reset();
+      this.ball2.reset();
+      this.ball3.reset();
+      this.ball4.reset();
     }
   }
 }
