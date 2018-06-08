@@ -2,6 +2,9 @@
 
 A basic pong game using SVGs.
 
+# Screenshot
+![](screenshots/pong.png)
+
 ## Setup
 
 **Install dependencies:**
@@ -30,4 +33,4 @@ A basic pong game using SVGs.
 * ▲ : up
 * ▼: down
 
-# Pong-Game
+
