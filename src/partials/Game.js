@@ -36,10 +36,6 @@ export default class Game {
 			this.width,
       this.height,
     );
-
-    // // create a ball
-		// this.ball = new Ball(this.width, this.height);
-		// this.ball2 = new Ball(this.width, this.height);
     
     this.score1 = new Score(200, 25, 25);
     this.score2 = new Score(290, 25, 25);

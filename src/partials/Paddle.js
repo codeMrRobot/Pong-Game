@@ -79,7 +79,6 @@ export default class Paddle {
     let bottomY = y + height;
     return { leftX, rightX, topY, bottomY };
   }
-  
 
   render(svg) {
     let rect = document.createElementNS(SVG_NS, 'rect');
