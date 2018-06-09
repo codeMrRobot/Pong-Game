@@ -2,11 +2,7 @@ import { SVG_NS, KEYS } from '../settings.js';
 
 export default class Paddle {
   constructor(boardHeight, width, height, x, y, up, down) {
-    this.boardHeight = boardHeight;
-    this.width = width;
-    this.height = height;
-    this.x = x;
-    this.y = y;
+    this.set(boardHeight, width, height, x, y);
     this.speed = 10;
     this.score = 0;
 
@@ -66,6 +62,14 @@ export default class Paddle {
 
   down(){
     this.y = Math.min(this.boardHeight - this.height, this.y + this.speed);
+  }
+
+  set(boardHeight, width, height, x, y) {
+    this.boardHeight = boardHeight;
+    this.width = width;
+    this.height = height;
+    this.x = x;
+    this.y = y;
   }
 
   coordinates(x, y, width, height) {

@@ -37,19 +37,9 @@ export default class Game {
       this.height,
     );
 
-    this.radius = 10;
-    this.ball3 = new Ball(
-		this.radius,
-			this.width,
-      this.height,
-    );
-
-    this.radius = 4;
-    this.ball4 = new Ball(
-			this.radius,
-			this.width,
-      this.height,
-    );
+    // // create a ball
+		// this.ball = new Ball(this.width, this.height);
+		// this.ball2 = new Ball(this.width, this.height);
     
     this.score1 = new Score(200, 25, 25);
     this.score2 = new Score(290, 25, 25);
@@ -83,8 +73,6 @@ export default class Game {
     this.paddle2.render(svg);
     this.ball.render(svg, this.paddle1, this.paddle2);
     this.ball2.render(svg, this.paddle1, this.paddle2);
-    this.ball3.render(svg, this.paddle1, this.paddle2);
-    this.ball4.render(svg, this.paddle1, this.paddle2);
     this.score1.render(svg, this.paddle1.score);
     this.score2.render(svg, this.paddle2.score);
     
@@ -93,20 +81,16 @@ export default class Game {
     const paddle2Msg = 'Player 2 Wins! :)';
     if (this.paddle1.score === 15) {
       this.winner.render(svg, paddle1Msg);
-      this.reset(this.paddle1);
-      this.reset(this.paddle2);
+      this.paddle1.set(this.height, this.paddleWidth, this.paddleHeight, this.boardGap, ((this.height - this.paddleHeight) /2));
+      this.paddle2.set(this.height, this.paddleWidth, this.paddleHeight, (this.width - this.boardGap - this.paddleWidth), ((this.height - this.paddleHeight) /2));
       this.ball.reset();
       this.ball2.reset();
-      this.ball3.reset();
-      this.ball4.reset();
     } else if (this.paddle2.score === 15) {
       this.winner.render(svg, paddle2Msg);
-      this.reset(this.paddle1);
-      this.reset(this.paddle2);
+      this.paddle1.set(this.height, this.paddleWidth, this.paddleHeight, this.boardGap, ((this.height - this.paddleHeight) /2));
+      this.paddle2.set(this.height, this.paddleWidth, this.paddleHeight, (this.width - this.boardGap - this.paddleWidth), ((this.height - this.paddleHeight) /2));
       this.ball.reset();
       this.ball2.reset();
-      this.ball3.reset();
-      this.ball4.reset();
     }
   }
 }

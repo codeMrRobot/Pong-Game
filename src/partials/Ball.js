@@ -12,16 +12,40 @@ export default class Ball {
 
   }
 
+  // reset() {
+  //   this.x = this.boardWidth / 2;
+  //   this.y = this.boardHeight / 2;
+
+    
+  //   this.vy = 0;
+  //   while (this.vy === 0) {
+  //     this.vy = Math.floor(Math.random() * 10 - 5);
+  //   }
+  //   this.vx = this.direction * (6 - Math.abs(this.vy));
+  // }
+
   reset() {
+    // default ball position and speed vector
     this.x = this.boardWidth / 2;
     this.y = this.boardHeight / 2;
-
+    this.vx = 0;
     this.vy = 0;
-    while (this.vy === 0) {
-      this.vy = Math.floor(Math.random() * 10 - 5);
-    }
-    this.vx = this.direction * (6 - Math.abs(this.vy));
-  }
+    this.color = 'white';
+
+    // random radius, speed, speed vector
+    do {
+        this.radius = Math.floor(Math.random() * 4 + 4);
+    } while(!this.radius);
+    do {
+        this.speed = Math.floor(Math.random() * 2.5);
+    } while(!this.speed)
+
+    do {
+        this.vy = Math.floor(Math.random() * 10 - 5);
+    } while(!this.vy)
+    this.vx = this.direction * (6 - Math.abs(this.vy)) * this.speed;
+    this.vy = this.vy * this.speed;
+}
 
   wallCollsion(paddle1, paddle2) {
     const hitLeft = this.x - this.radius <= 0;
@@ -79,8 +103,7 @@ export default class Ball {
       this.vy = 0;
     }
   }
-
-  
+ 
   render(svg, paddle1, paddle2) {
     this.x += this.vx;
     this.y += this.vy;
@@ -94,3 +117,4 @@ export default class Ball {
     svg.appendChild(ball);
   }
 }
+
