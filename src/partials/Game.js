@@ -57,6 +57,7 @@ export default class Game {
     if(this.pause){
       return;
     }
+    
     this.gameElement.innerHTML = '';
     let svg = document.createElementNS(SVG_NS, 'svg');
     svg.setAttributeNS(null, 'width', this.width);
@@ -90,8 +91,7 @@ export default class Game {
     }
   }
 }
-    
-  
+      
 let audio;
 document.addEventListener('keydown', event => {
 	switch (event.key) {
